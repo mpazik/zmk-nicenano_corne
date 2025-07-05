@@ -4,9 +4,7 @@
 #include <input/processors.dtsi>
 #include <zephyr/dt-bindings/input/input-event-codes.h>
 #include <behaviors.dtsi>
-#include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 #include <dt-bindings/zmk/rgb.h>
 
@@ -59,51 +57,51 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q        &kp W        &kp E     &kp R     &kp T                   &kp UP                &kp Y        &kp U  &kp I      &kp O    &kp P        &kp BACKSLASH
-&kp ESC    &lt 3 A      &kp S        &kp D     &kp F     &kp G        &kp LEFT   &kp ENTER  &kp RIGHT  &kp H        &kp J  &kp K      &kp L    &lt 2  SEMI  &kp SQT
-&kp LSHFT  &mt LSHFT Z  &mt LCTRL X  &kp C     &kp V     &kp B        &none      &kp DOWN              &kp N        &kp M  &kp COMMA  &kp DOT  &kp FSLH     &kp RSHFT
-                                     &kp LALT  &kp LCMD  &lt 4 SPACE                                   &kp ENTER    &mo 1  &kp RALT
+&kp TAB    &kp Q        &kp W        &kp E     &kp R     &kp T                                 &msc SCRL_UP                     &kp Y      &kp U  &kp I      &kp O    &kp P       &kp BACKSLASH
+&kp ESC    &lt 3 A      &kp S        &kp D     &kp F     &kp G                 &msc SCRL_LEFT  &kp ENTER       &msc SCRL_RIGHT  &kp H      &kp J  &kp K      &kp L    &lt 2 SEMI  &kp SQT
+&kp LSHFT  &mt LSHFT Z  &mt LCTRL X  &kp C     &kp V     &kp B        &none                    &msc SCRL_DOWN                   &kp N      &kp M  &kp COMMA  &kp DOT  &kp FSLH    &kp RSHFT
+                                     &kp LALT  &kp LCMD  &lt 4 SPACE                                                            &kp ENTER  &mo 1  &kp RALT
             >;
         };
 
         lower_layer {
             display-name = "NUMBER";
             bindings = <
-&kp GRAVE   &kp N1       &kp N2          &kp N3        &kp N4        &kp N5                           &mmv MOVE_UP                     &kp N6     &kp N7     &kp N9    &kp N8    &kp N0     &kp BSLH
-&kp ESC     &kp EXCL     &kp AT          &kp HASH      &kp DOLLAR    &kp PERCENT      &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PLUS   &kp UNDER  &kp LBKT  &kp RBKT  &kp SQT    &none
-&kp LSHIFT  &kp LSHFT    &kp LCTRL       &trans        &trans        &rgb_ug RGB_EFF  &none           &mmv MOVE_DOWN                   &kp EQUAL  &kp MINUS  &par_l    &par_r    &kp EQUAL  &kp C_RECORD
-                                         &trans        &trans        &trans                                                            &kp ENTER  &none      &kp RALT
+&kp GRAVE   &kp N1     &kp N2     &kp N3    &kp N4      &kp N5                                    &mmv MOVE_UP                     &kp N6     &kp N7     &kp N9    &kp N8    &kp N0     &kp BSLH
+&kp ESC     &kp EXCL   &kp AT     &kp HASH  &kp DOLLAR  &kp PERCENT               &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp PLUS   &kp UNDER  &kp LBKT  &kp RBKT  &kp SQT    &none
+&kp LSHIFT  &kp LSHFT  &kp LCTRL  &trans    &trans      &rgb_ug RGB_EFF  &none                    &mmv MOVE_DOWN                   &kp EQUAL  &kp MINUS  &par_l    &par_r    &kp EQUAL  &kp C_RECORD
+                                  &trans    &trans      &trans                                                                     &kp ENTER  &none      &kp RALT
             >;
         };
 
         right_nav {
             display-name = "R Nav";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans                   &mmv MOVE_UP                     &kp DEL        &kp LBKT   &kp UP    &kp RBKT   &none  &bootloader
-&trans  &trans  &trans  &trans  &trans  &trans   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp BACKSPACE  &kp LEFT   &kp DOWN  &kp RIGHT  &none  &none
-&trans  &trans  &trans  &trans  &trans  &trans                   &mmv MOVE_DOWN  &none            &kp DOT        &kp COMMA  &none     &none      &none  &none
-                        &trans  &trans  &trans                                                    &trans         &trans     &none
+&trans  &trans  &trans  &trans  &trans  &trans                                    &mmv MOVE_UP                   &kp DEL        &kp LBKT   &kp UP    &kp RBKT   &none  &bootloader
+&trans  &trans  &trans  &trans  &trans  &trans                    &mmv MOVE_LEFT  &mkp LCLK     &mmv MOVE_RIGHT  &kp BACKSPACE  &kp LEFT   &kp DOWN  &kp RIGHT  &none  &none
+&trans  &trans  &trans  &trans  &trans  &trans  &mmv MOVE_DOWN                    &none                          &kp DOT        &kp COMMA  &none     &none      &none  &none
+                        &trans  &trans  &trans                                                                   &trans         &trans     &none
             >;
         };
 
         left_nav {
             display-name = "L Nav";
             bindings = <
-&bootloader  &none      &kp LBKT   &kp UP    &kp RBKT   &kp DEL                         &mmv MOVE_UP                      &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &none      &kp LEFT   &kp DOWN  &kp RIGHT  &kp BACKSPACE   &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT   &trans  &trans  &trans  &trans  &trans  &trans
-&trans       &kp LSHFT  &kp LCTRL  &kp ESC   &none      &none           &none           &mmv MOVE_DOWN                    &trans  &trans  &trans  &trans  &trans  &trans
-                                   &trans    &trans     &kp ENTER                                                         &trans  &trans  &trans
+&bootloader  &none      &kp LBKT   &kp UP    &kp RBKT   &kp DEL                                 &mmv MOVE_UP                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &none      &kp LEFT   &kp DOWN  &kp RIGHT  &kp BACKSPACE           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &trans  &trans  &trans  &trans  &trans  &trans
+&trans       &kp LSHFT  &kp LCTRL  &kp ESC   &none      &none          &none                    &mmv MOVE_DOWN                   &trans  &trans  &trans  &trans  &trans  &trans
+                                   &trans    &trans     &kp ENTER                                                                &trans  &trans  &trans
             >;
         };
 
         system {
             display-name = "system";
-        bindings = <
-&studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                    &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
-&trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4  &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
-&trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &none           &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
-                                       &trans       &trans     &trans                                                     &trans       &trans     &trans
+            bindings = <
+&studio_unlock  &kp F1      &kp F2     &kp F3       &kp F4     &kp F5                             &mmv MOVE_UP                     &kp F6       &kp F7     &kp F8       &kp F9      &kp F10          &kp F11
+&trans          &trans      &mkp LCLK  &mkp MCLK    &mkp RCLK  &mkp MB4           &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &bootloader  &mkp LCLK  &mkp MCLK    &mkp RCLK   &kp PRINTSCREEN  &kp F12
+&trans          &sys_reset  &trans     &bootloader  &trans     &mkp MB5  &none                    &mmv MOVE_DOWN                   &trans       &trans     &bootloader  &sys_reset  &kp SCROLLLOCK   &kp PAUSE_BREAK
+                                       &trans       &trans     &trans                                                              &trans       &trans     &trans
             >;
-         };
+        };
     };
 };
