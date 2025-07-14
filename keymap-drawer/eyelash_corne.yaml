@@ -30,7 +30,7 @@ layers:
   - {t: ;, h: R Nav, s: ':'}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
-  - Z
+  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: X, h: '$$mdi:apple-keyboard-control$$'}
   - C
   - V
@@ -40,9 +40,9 @@ layers:
   - N
   - M
   - {t: ',', s: <}
-  - {t: '$$mdi:apple-keyboard-control$$', h: .}
+  - {t: ., h: '$$mdi:apple-keyboard-control$$', s: '>'}
   - {t: /, s: '?'}
-  - $$mdi:apple-keyboard-shift$$
+  - Z
   - $$mdi:apple-keyboard-option$$
   - $$mdi:apple-keyboard-command$$
   - {t: '$$mdi:keyboard-space$$', h: system}
