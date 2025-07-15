@@ -7,7 +7,7 @@ layers:
   - E
   - R
   - T
-  - $$mdi:pan-up$$
+  - PgUp
   - Y
   - U
   - I
@@ -36,7 +36,7 @@ layers:
   - V
   - B
   - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - $$mdi:pan-down$$
+  - PgDn
   - N
   - M
   - {t: ',', s: <}
