@@ -2,11 +2,11 @@ layout: {zmk_keyboard: eyelash_corne}
 layers:
   QWERTY:
   - $$mdi:keyboard-tab$$
+  - T
   - Q
   - W
   - E
   - R
-  - T
   - PgUp
   - Y
   - U
@@ -15,11 +15,11 @@ layers:
   - P
   - {t: \, s: '|'}
   - $$mdi:keyboard-esc$$
+  - G
   - A
   - S
   - D
   - F
-  - G
   - $$mdi:pan-left$$
   - {t: QWERTY, h: toggle}
   - $$mdi:pan-right$$
