@@ -10,28 +10,28 @@ layers:
   - PgUp
   - Y
   - U
-  - I
+  - $$mdi:arrow-up-bold$$
   - O
   - P
   - {t: \, s: '|'}
-  - {t: '$$mdi:keyboard-esc$$', h: system}
-  - {t: A, h: L Nav}
+  - $$mdi:keyboard-esc$$
+  - A
   - S
   - D
   - F
   - G
   - $$mdi:pan-left$$
-  - {t: '$$mdi:keyboard-return$$', type: enter}
+  - {t: QWERTY, h: toggle}
   - $$mdi:pan-right$$
   - H
-  - J
-  - K
-  - L
-  - {t: ;, h: R Nav, s: ':'}
+  - $$mdi:arrow-left-bold$$
+  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-right-bold$$
+  - {t: ;, s: ':'}
   - {t: '''', s: '"'}
   - $$mdi:apple-keyboard-shift$$
-  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: X, h: '$$mdi:apple-keyboard-control$$'}
+  - Z
+  - X
   - C
   - V
   - B
@@ -47,8 +47,8 @@ layers:
   - $$mdi:apple-keyboard-command$$
   - $$mdi:keyboard-space$$
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - NUMBER
-  - $$mdi:apple-keyboard-option$$
+  - $$mdi:keyboard-space$$
+  - {t: '$$mdi:backspace$$', type: backspace}
   NUMBER:
   - {t: '`', s: '~'}
   - {t: '1', s: '!'}
