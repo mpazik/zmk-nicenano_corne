@@ -139,8 +139,8 @@
         game {
             display-name = "QWERTY";
             bindings = <
-&kp TAB    &kp Q  &kp W  &kp E     &kp R     &kp T                               &kp PAGE_UP                     &kp Y      &kp U      &kp UP         &kp O          &kp P     &kp BACKSLASH
-&kp ESC    &kp A  &kp S  &kp D     &kp F     &kp G               &msc SCRL_LEFT  &to 0          &msc SCRL_RIGHT  &kp H      &kp LEFT   &kp DOWN       &kp RIGHT      &kp SEMI  &kp SQT
+&kp TAB    &kp T  &kp Q  &kp W     &kp E     &kp R                               &kp PAGE_UP                     &kp Y      &kp U      &kp UP         &kp O          &kp P     &kp BACKSLASH
+&kp ESC    &kp G  &kp A  &kp S     &kp D     &kp F               &msc SCRL_LEFT  &to 0          &msc SCRL_RIGHT  &kp H      &kp LEFT   &kp DOWN       &kp RIGHT      &kp SEMI  &kp SQT
 &kp LSHFT  &kp Z  &kp X  &kp C     &kp V     &kp B      &none                    &kp PAGE_DOWN                   &kp N      &kp M      &kp COMMA      &mt RCTRL DOT  &kp FSLH  &kp Z
                          &kp LALT  &kp LCMD  &kp SPACE                                                           &kp ENTER  &kp SPACE  &kp BACKSPACE
             >;
